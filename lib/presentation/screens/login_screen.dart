@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: BlocConsumer<LoginCubit, CreateLoginState>
           (
             listener: (context, state) {
-              if (state is CreateLoginSuccessState) {
+              if (state is CreateLoginsSuccessState) {
                 ScaffoldMessenger.of(context,).showSnackBar(
                     SnackBar(content: Text("Login is successful")));
                 Navigator.push(
