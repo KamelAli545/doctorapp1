@@ -47,13 +47,14 @@ class _SearchScreenState extends State<SearchScreen> {
                   title: UpperBar(title: "Search"),),
                 bottomNavigationBar: HomeWidget(),
                 body: Column(
-                      children: [SearchWidget(hintTxt: "Search",
+                      children: [
+                        SearchWidget(hintTxt: "Search",
                         onChanged: (text) {
                           setState(() => searchText = text);
                           context.read<SearchCubit>().searchDoctors(query: searchText,specialtyId: selectedSpecialtyId);
-
                         },
                       ),
+
                         SizedBox(
                           height: 10,
                         ),
